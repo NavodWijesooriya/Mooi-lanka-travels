@@ -1,0 +1,27 @@
+.container {
+  width: 100rem;
+  margin-bottom: 2rem;
+  margin-left: auto; /* Equivalent to mx-auto in Tailwind */
+  margin-right: auto; /* Equivalent to mx-auto in Tailwind */
+  margin-top: 2.5rem; /* Equivalent to mt-10 in Tailwind */
+  padding-left: 1rem; /* Equivalent to px-4 in Tailwind */
+  padding-right: 1rem; /* Equivalent to px-4 in Tailwind */
+}
+
+.imageDiv {
+  position: relative;
+  height: 400px; /* Default height for larger screens */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Make container responsive for mobile */
+    max-width: 20rem; /* Constrain max-width for better mobile layout */
+    margin: 2rem auto; /* Adjust spacing for smaller screens */
+  }
+
+  .imageDiv {
+    height: 50px; /* Reduce height specifically for mobile screens */
+  }
+}

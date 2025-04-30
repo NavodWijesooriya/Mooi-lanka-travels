@@ -1,0 +1,9 @@
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.git
+
+# Ensure Dockerfile and .next are not ignored
+# Dockerfile
+# .next

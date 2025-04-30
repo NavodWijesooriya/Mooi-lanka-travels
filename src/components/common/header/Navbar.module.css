@@ -1,0 +1,191 @@
+/* Logo Styling */
+.logo {
+  width: 130px;
+  height: 75px;
+  margin-bottom: 10px;
+  margin-left: 20px; /* Moves the logo slightly to the right */
+  object-fit: contain; /* Ensures the logo maintains aspect ratio */
+  transition: width 0.3s, height 0.3s, margin-left 0.5s; /* Smooth resizing transitions */
+}
+
+/* Navbar container styling */
+.navbarCustom {
+  background: linear-gradient(90deg, #1A1363, #7F002A);
+}
+
+
+/* Adjustments for tablet screens */
+@media (min-width: 768px) {
+  .navbarCustom {
+    height: 72px;
+    padding: 0 24px;
+  }
+}
+
+/* Adjustments for desktop screens */
+@media (min-width: 1024px) {
+  .navbarCustom {
+    height: 80px;
+    padding: 0 32px;
+  }
+}
+
+/* Menu item styling */
+.menuItem {
+  margin-right: 20px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 550;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s; /* Smooth color and hover effects */
+}
+
+.menuItem:hover {
+  color: #817ffc; /* Lighter color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Dropdown button styling */
+.dropdownButton {
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.dropdownButton:hover {
+  color: #f0f0f0; /* Lighter color on hover */
+  transform: scale(1.05); /* Slight zoom-in */
+}
+
+/* Text styling */
+.textWhite {
+  color: white;
+}
+
+/* Logo link styling */
+.logoLink {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  transition: font-size 0.3s, color 0.3s;
+}
+
+.logoLink:hover {
+  color: #817ffc;
+}
+
+/* Navbar End Section */
+.navbar-end {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Button styling */
+.navButton {
+  background-color: #4c4c6d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navButton:hover {
+  background-color: #817ffc;
+  transform: scale(1.05);
+}
+
+/* Mobile Menu Toggle */
+.menuToggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.menuToggle:hover {
+  transform: rotate(90deg);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
+  .navbar-end {
+    display: none;
+    flex-direction: column;
+    background-color: #F75723;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 999;
+  }
+  .navbar-end.active {
+    display: flex;
+  }
+}
+
+/* Logo adjustments for small screens */
+@media (min-width: 300px) and (max-width: 425px) {
+  .logo {
+    width: 70px;
+    height: 60px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+  .navbar-end {
+    font-size: small;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 868px) {
+  .logo {
+    width: 70px;
+    height: 60px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+  }
+  .navbar-end {
+    font-size: small;
+  }
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/* Navbar animation */
+.navbarCustom {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Active menu item */
+.menuItem.active {
+  color: #f0f0f0;
+  font-weight: bold;
+  border-bottom: 2px solid #817ffc;
+}
